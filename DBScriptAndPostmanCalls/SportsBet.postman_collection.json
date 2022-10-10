@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "8650e72e-3bb3-4d2e-b5e3-69941bb55996",
+		"name": "SportsBet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20892295"
+	},
+	"item": [
+		{
+			"name": "Match calls",
+			"item": [
+				{
+					"name": "get all  matches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/match/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get match by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/match/find/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match",
+								"find",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add match",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n     \"matchDate\": \"31/03/2021\",\r\n      \"teamA\": \"1312\",\r\n         \"teamB\": \"1213\",\r\n            \"matchTime\": \"12:00:00\",\r\n            \"sport\": \"3\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/match/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update attribute",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n     \"id\": 100,\r\n    \"description\": \"updated neo\",\r\n    \"matchDate\": \"2021-03-31\",\r\n    \"matchTime\": \"12:00:00\",\r\n    \"teamA\": \"OSFP\",\r\n    \"teamB\": \"PAO\",\r\n    \"sport\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/match/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete match",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/attribute/delete/F588E74D-41B2-11ED-B417-309C239AFF83",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"attribute",
+								"delete",
+								"F588E74D-41B2-11ED-B417-309C239AFF83"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match odds calls",
+			"item": [
+				{
+					"name": "get all  match odds",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/odds/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odds",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get match odd by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/attribute/find/38324646-3234-4242-2d30-3138302d3430",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"attribute",
+								"find",
+								"38324646-3234-4242-2d30-3138302d3430"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add match odd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"matchId\": 1,\r\n    \"specifier\" : \"X\",\r\n        \"odd\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/match-odds/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match-odds",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update match odd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"f588e74d-41b2-11ed-b417-309c239aff83\",\r\n    \"name\": \"\",\r\n    \"value\": \"o\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/match-odds/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match-odds",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete match odd",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/match-odds/delete/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"match-odds",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all  match odds by match id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/odds/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odds",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/attribute/find/38324646-3234-4242-2d30-3138302d3430",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"attribute",
+						"find",
+						"38324646-3234-4242-2d30-3138302d3430"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
